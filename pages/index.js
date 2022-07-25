@@ -1,4 +1,5 @@
 import { createClient } from "../prismicio";
+import { PrismicText } from "@prismicio/react";
 
 export default function Home({ page }) {
   console.log(page);
@@ -6,14 +7,17 @@ export default function Home({ page }) {
     <div>
       <ul>
         {page.map((document) => (
-          <li key={document.id}>{document.data.title[0].text}</li>
+          <div key={document.id}>
+            <li>{document.data.title[0].text}</li>
+            <PrismicText field={document.data.title} />
+          </div>
         ))}
       </ul>
     </div>
   );
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getServerSideProps({ previewData }) {
   const client = createClient({ previewData });
 
   const page = await client.getAllByType("blog_post");
