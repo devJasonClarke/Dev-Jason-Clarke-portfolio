@@ -1,0 +1,14 @@
+.section{
+    display: block;
+    min-height: 100vh;
+    padding: var(--padding);
+}
+.white {
+    background-color: white;
+}
+.black {
+    background-color: black;
+}
+.grey {
+    background-color: var(--light-grey);
+}
