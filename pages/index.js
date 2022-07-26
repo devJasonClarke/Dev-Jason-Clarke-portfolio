@@ -28,7 +28,14 @@ export async function getServerSideProps({ previewData }) {
   const client = createClient({ previewData });
 
   /*   const page = await client.getByUID("blog_post", "test"); */
-  const page = await client.getByType("blog_post");
+  const page = await client.getByType("blog_post", {
+    page: 1,
+    pageSize: 4,
+    orderings: {
+      field: "my.blog_post.timestamp",
+      direction: "desc",
+    },
+  });
 
   return {
     props: { page }, // Will be passed to the page component as props
