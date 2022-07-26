@@ -8,10 +8,7 @@ export default function Home() {
     <div>
       <Nav />
       <Hero />
-      <SectionPadding color="black">
-        <h1 data-aos="fade-up">awfdas</h1>
-      </SectionPadding>
-      <SectionPadding color="grey" data-aos="fade-right" data-aos-delay="600">
+      <SectionPadding color="grey">
         <h1 data-aos="fade-up">awfdas</h1>
       </SectionPadding>
     </div>

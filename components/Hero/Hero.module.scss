@@ -6,10 +6,17 @@
   align-items: center;
 
   h1 {
+    
     font-size: var(--large-font);
     text-align: center;
-    font-family: "Roboto";
     line-height: 1.3;
     // font-weight: normal;
+
+    div{
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      cursor: pointer;
+    }
   }
 }

@@ -14,4 +14,9 @@
   width: 40%;
   justify-content: space-between;
   align-items: center;
+
+  li {
+    list-style: none;
+    text-decoration: none;
+  }
 }
