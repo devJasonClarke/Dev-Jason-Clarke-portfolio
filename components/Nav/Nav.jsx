@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Nav.module.scss";
+import Link from "next/link";
 
 const Nav = () => {
   return (
@@ -11,11 +12,21 @@ const Nav = () => {
         height={40}
       />
       <ul className={styles["nav-links"]}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Blog</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li>
+          <Link href="#">Home </Link>
+        </li>
+        <li>
+          <Link href="#">About </Link>
+        </li>
+        <li>
+          <Link href="#">Blog </Link>
+        </li>
+        <li>
+          <Link href="#">Portfolio </Link>
+        </li>
+        <li>
+          <Link href="#">Contact </Link>
+        </li>
       </ul>
     </nav>
   );

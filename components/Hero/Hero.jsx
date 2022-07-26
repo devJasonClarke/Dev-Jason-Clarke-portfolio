@@ -1,21 +1,24 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
+import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const Hero = () => {
+const Hero = ({ data }) => {
+  const [theData, setTheData] = useState();
+  // During hydration `useEffect` is called. `window` is available in `useEffect`. In this case because we know we're in the browser checking for window is not needed. If you need to read something from window that is fine.
+  // By calling `setColor` in `useEffect` a render is triggered after hydrating, this causes the "browser specific" value to be available. In this case 'red'.
+  useEffect(() => setTheData(data), [data]);
+
   return (
     <header className={styles.header}>
-      <h1>
-        Hi{" "}
-        <motion.div
-          animate={{ rotate: [0, 40, 0, 30, 0]}}
-          transition={{ ease: "easeOut", duration: 1 }}
-          className={styles.run}
-        >
-          👋
-        </motion.div>
-        , My Name Is <br /> Jason Clarke
-      </h1>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        <PrismicRichText field={theData?.data?.hero_heading} />
+      </motion.div>
     </header>
   );
 };

@@ -1,5 +1,6 @@
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: "Roboto";
@@ -32,3 +33,4 @@ button {
   --large-font: 90px;
   --regular-font: 16px;
 }
+
