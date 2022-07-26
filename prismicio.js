@@ -1,18 +1,18 @@
-import * as prismic from '@prismicio/client'
-import { enableAutoPreviews } from '@prismicio/next'
+import * as prismic from "@prismicio/client";
+import { enableAutoPreviews } from "@prismicio/next";
 
-export const endpoint = prismic.getEndpoint(process.env.API_ENDPOINT)
-export const repositoryName = prismic.getRepositoryName(endpoint)
+export const endpoint = prismic.getEndpoint(process.env.API_ENDPOINT);
+export const repositoryName = prismic.getRepositoryName(endpoint);
 
 // Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {
   switch (doc.type) {
-    case 'homepage':
-      return '/'
-    case 'page':
-      return `/${doc.uid}`
+    case "homepage":
+      return "/";
+    case "blog_post":
+      return `blog/${doc.uid}`;
     default:
-      return null
+      return null;
   }
 }
 
@@ -20,13 +20,13 @@ export function linkResolver(doc) {
 export function createClient(config = {}) {
   const client = prismic.createClient(endpoint, {
     ...config,
-  })
+  });
 
   enableAutoPreviews({
     client,
     previewData: config.previewData,
     req: config.req,
-  })
+  });
 
-  return client
+  return client;
 }
