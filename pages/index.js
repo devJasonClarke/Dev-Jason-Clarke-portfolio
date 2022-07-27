@@ -3,26 +3,35 @@ import Hero from "../components/Hero/Hero";
 import Nav from "../components/Nav/Nav";
 import SectionPadding from "../components/SectionPadding/SectionPadding";
 import AboutSection from "../components/AboutSection/AboutSection";
+import BlogSection from "../components/BlogSection/BlogSection";
 
-export default function Home({ page }) {
+export default function Home({ page, blogs }) {
   console.log(page);
+  console.log(blogs);
   return (
-    <div>
-      <Nav />
+    <>
       <Hero data={page} />
-      <AboutSection/>
+      <AboutSection />
 
-    </div>
+      <BlogSection data={blogs}></BlogSection>
+    </>
   );
 }
 
 export async function getServerSideProps({ previewData }) {
   const client = createClient({ previewData });
 
-  /*   const page = await client.getByUID("blog_post", "test"); */
+  const blogs = await client.getByType("blog_post", {
+    page: 1,
+    pageSize: 4,
+    orderings: {
+      field: "my.blog_post.timestamp",
+      direction: "desc",
+    },
+  });
   const page = await client.getByUID("homepage", "index");
 
   return {
-    props: { page }, // Will be passed to the page component as props
+    props: { page, blogs }, // Will be passed to the page component as props
   };
 }

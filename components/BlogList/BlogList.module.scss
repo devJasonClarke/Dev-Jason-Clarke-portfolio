@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.text {
+  margin-right: 30px;
+}

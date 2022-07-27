@@ -6,7 +6,7 @@ const SectionPaddingAlt = ({ children, color }) => {
     <section className={`${styles.section}`}>
       <motion.div
         className={`${styles.bg} ${styles[color]}`}
-        whileInView={{ width: "90%" }}
+        whileInView={{ width: "100%" }}
         initial={{ width: "0.5%" }}
         transition={{
           duration: 1.2,
