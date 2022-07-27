@@ -1,17 +1,30 @@
-.section{
-    display: block;
-    min-height: 100vh;
-    width: var(--page-width);
-    margin: 0 auto;
-    padding: var(--large-padding);
-    border-radius: 15px;
+.section {
+  display: block;
+  min-height: 70vh;
+  position: relative;
+}
+.container {
+  width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--large-padding);
 }
 .white {
-    background-color: white;
+  background-color: white;
 }
 .black {
-    background-color: black;
+  background-color: black;
 }
 .grey {
-    background-color: var(--light-grey);
+  background-color: var(--light-grey);
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 0.1px;
+  width: var(--page-width);
 }

@@ -3,7 +3,7 @@ import styles from "./AboutSection.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import SectionPadding from "../SectionPadding/SectionPadding";
+import SectionPaddingAlt from "../SectionPaddingAlt/SectionPaddingAlt";
 
 const AboutSection = ({ data }) => {
   const [theData, setTheData] = useState();
@@ -13,11 +13,11 @@ const AboutSection = ({ data }) => {
 
   return (
    
-   <SectionPadding color='grey'>
+   <SectionPaddingAlt color='grey'>
     <h1>
         About Me
     </h1>
-   </SectionPadding>
+   </SectionPaddingAlt>
   );
 };
 export default AboutSection;
