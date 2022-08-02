@@ -11,6 +11,9 @@ export default function Home({ page, blogs }) {
   return (
     <>
       <Hero data={page} />
+      <AboutSection />
+
+      <BlogSection data={blogs}></BlogSection>
     </>
   );
 }
