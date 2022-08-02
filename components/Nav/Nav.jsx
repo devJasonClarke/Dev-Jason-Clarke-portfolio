@@ -1,6 +1,7 @@
+import NavLinks from "../NavLinks/NavLinks";
 import Image from "next/image";
 import styles from "./Nav.module.scss";
-import Link from "next/link";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const Nav = () => {
   return (
@@ -11,23 +12,8 @@ const Nav = () => {
         width="40"
         height={40}
       />
-      <ul className={styles["nav-links"]}>
-        <li>
-          <Link href="/">Home </Link>
-        </li>
-        <li>
-          <Link href="/about">About </Link>
-        </li>
-        <li>
-          <Link href="#">Blog </Link>
-        </li>
-        <li>
-          <Link href="#">Portfolio </Link>
-        </li>
-        <li>
-          <Link href="#">Contact </Link>
-        </li>
-      </ul>
+      <NavLinks />
+      <MobileMenu/>
     </nav>
   );
 };

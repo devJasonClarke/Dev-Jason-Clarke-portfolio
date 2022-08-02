@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 
 import { jarallax, jarallaxVideo } from 'jarallax';
 import 'jarallax/dist/jarallax.css';
+import styles from './Jarallax.module.scss'
 
 // Optional video extension
 jarallaxVideo();
@@ -32,7 +33,7 @@ export default function Jarallax({ className = '', children, ...props }) {
   }, [props]);
 
   return (
-    <div ref={$el} className={`jarallax ${className}`}>
+    <div ref={$el} className={`jarallax ${className} ${styles.bg}`}>
       {children}
     </div>
   );

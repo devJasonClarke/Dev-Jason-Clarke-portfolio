@@ -1,0 +1,105 @@
+.active {
+  color: white !important;
+}
+
+.nav-links {
+  display: flex;
+  //width: 35%;
+  width: 469px;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    list-style: none;
+    text-decoration: none;
+
+    a {
+      position: relative;
+      font-size: 16px;
+      padding: 10px 0px;
+      z-index: 1;
+      transition: 0.4s all ease;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: bold;
+
+      &:hover {
+        color: white;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: -0.25em;
+        right: -0.25em;
+        background-color: var(--grey);
+        transform-origin: bottom center;
+        transform: scaleY(0);
+        transition: all 0.15s ease-in-out;
+        opacity: 0.1;
+        border-radius: 5px;
+      }
+
+      &:hover::before {
+        transform: scaleY(1);
+        background-color: var(--grey);
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+.hover-link {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-link > span {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.hover-link > span > span {
+  display: inline-block;
+}
+
+.hover-link > span > span:nth-of-type(1) {
+  transition: 0.4s ease all;
+}
+
+.hover-link > span > span:nth-of-type(2) {
+  transition: 0.4s ease all;
+  transition-delay: 0.07s;
+}
+
+.hover-link > span > span > span {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(200%);
+}
+
+.hover-link:hover > span > span,
+.hover-link:focus > span > span {
+  color: #fff;
+  transform: translateY(-200%);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .nav-links{
+    display: none;
+  }
+}

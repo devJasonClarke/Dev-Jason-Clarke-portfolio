@@ -1,0 +1,24 @@
+@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/shelf";
+
+.mobile-menu {
+  display: none;
+}
+
+.inner, .bar{
+    background-color: white !important;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+        &::before,
+        &::after {
+            background-color: white !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .mobile-menu {
+    display: block;
+  }
+}

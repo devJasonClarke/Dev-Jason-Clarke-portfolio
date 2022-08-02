@@ -1,9 +1,11 @@
 import { createClient } from "../../prismicio";
 import { PrismicText, PrismicRichText } from "@prismicio/react";
+import Hero from "@/components/@/Hero/Hero";
 
-const Blog = ({ document }) => {
+const BlogPost = ({ document }) => {
   return (
     <div>
+      <Hero/>
       <PrismicText field={document.data.title} />
       <PrismicRichText field={document.data.article} />
     </div>
@@ -21,4 +23,4 @@ export async function getServerSideProps({ params, previewData }) {
   };
 }
 
-export default Blog;
+export default BlogPost;

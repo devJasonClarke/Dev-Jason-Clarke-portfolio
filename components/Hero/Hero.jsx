@@ -1,11 +1,13 @@
-import Image from "next/image";
 import styles from "./Hero.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
+import Nav from "../Nav/Nav";
 
-const Jarallax = dynamic(() => import('../Jarallax/Jarallax.jsx'), { ssr: false });
+const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
+  ssr: false,
+});
 
 const Hero = ({ data }) => {
   const [theData, setTheData] = useState();
@@ -14,18 +16,27 @@ const Hero = ({ data }) => {
   useEffect(() => setTheData(data), [data]);
 
   return (
-    <header>
-        <Jarallax className={styles.header} speed={0.2} videoSrc="https://youtu.be/S4L8T2kFFck">
-        <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
+    <header >
+      <Jarallax
+        speed={0.2}
+        /*    videoSrc="https://youtu.be/S4L8T2kFFck" */
       >
-        <PrismicRichText field={theData?.data?.hero_heading} />
-      </motion.div>
-        </Jarallax>
+        <img
+          className={`jarallax-img`}
+          src="https://images.unsplash.com/photo-1515704089429-fd06e6668458?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        />
+        
+        <motion.div
+          className={styles.container}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <PrismicRichText field={theData?.data?.hero_heading} />
+        </motion.div>
+      </Jarallax>
     </header>
-   /*  <header className={styles.header}>
+    /*  <header className={styles.header}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

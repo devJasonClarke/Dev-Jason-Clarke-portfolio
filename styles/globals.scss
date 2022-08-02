@@ -29,9 +29,22 @@ button {
   /*   Spacing */
   --large-padding: 60px;
   --regular-padding: 30px 60px;
-  --page-width: 1300px;
+  --page-width: 1400px;
 
   /*   font size */
   --large-font: 44px;
   --regular-font: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    /*   Spacing */
+    --large-padding: 60px;
+    --regular-padding: 30px 60px;
+    --page-width: 1400px;
+
+    /*   font size */
+    --large-font: 34px;
+    --regular-font: 16px;
+  }
 }

@@ -565,6 +565,11 @@ define-properties@^1.1.3, define-properties@^1.1.4:
     has-property-descriptors "^1.0.0"
     object-keys "^1.1.1"
 
+delicious-hamburgers@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/delicious-hamburgers/-/delicious-hamburgers-1.2.2.tgz#6b7bd79298cdfcf413742a7b7aa91601d79a711d"
+  integrity sha512-dpiQc9RT/eiihRkdFkvWvIrkOqLL2nlVCuO/IVwf3n5HUoUNL7St78WQ07wiR9iaZOxH6YoYBbZTV+1FKT2aeA==
+
 dir-glob@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-3.0.1.tgz#56dbf73d992a4a93ba1584f4534063fd2e41717f"

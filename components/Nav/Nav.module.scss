@@ -5,47 +5,13 @@
   height: 60px;
   width: 100%;
   max-width: var(--page-width);
-  margin: 30px auto 0 auto;
-}
-
-.nav-links {
-  display: flex;
-  width: 35%;
-  justify-content: space-between;
-  align-items: center;
-
-  li {
-    list-style: none;
-    text-decoration: none;
-
-    a {
-      position: relative;
-      font-size: 17px;
-      padding: 10px 15px;
-      z-index: 1;
-      transition: 0.4s all ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: -0.25em;
-        right: -0.25em;
-        background-color: var(--grey);
-        transform-origin: bottom center;
-        transform: scaleY(0);
-        transition: all 0.15s ease-in-out;
-        opacity: 0.1;
-        border-radius: 5px;
-      }
-
-      &:hover::before {
-        transform: scaleY(1);
-        background-color: var(--grey);
-        opacity: 0.1;
-      }
-    }
-  }
+  padding: 0 30px;
+  margin: 0 auto;
+  position: absolute;
+  top: 40px;
+  z-index: 99;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
