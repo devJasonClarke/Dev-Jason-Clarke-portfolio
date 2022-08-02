@@ -1,7 +1,7 @@
 .section{
     display: block;
     min-height: 100vh;
-    width: var(--page-width);
+    max-width: var(--page-width);
     margin: 0 auto;
     padding: var(--large-padding);
     border-radius: 15px;

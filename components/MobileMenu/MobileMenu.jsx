@@ -6,7 +6,13 @@ import NavLinks from "../NavLinks/NavLinks";
 const MobileMenu = () => {
   const [toggle, SetToggle] = useState(false);
   return (
-    <div className={styles["menu-container"]}>
+    <div
+      className={
+        toggle
+          ? `${styles.fixed} ${styles["menu-container"]}`
+          : `${styles["menu-container"]}`
+      }
+    >
       <div className={styles["hamburger-menu"]}>
         <button
           className={
@@ -17,6 +23,11 @@ const MobileMenu = () => {
           type="button"
           onClick={() => {
             SetToggle(!toggle);
+            if(toggle){
+              document.body.style.overflowY = 'scroll';
+            } else {
+              document.body.style.overflowY = 'hidden';
+            }
             console.log(toggle);
           }}
         >
@@ -36,7 +47,7 @@ const MobileMenu = () => {
             transition={{ duration: 0.5 }}
             exit={{ height: "0%" }}
           >
-            <NavLinks delay={0.15} />
+            <NavLinks delay={0.1} />
           </motion.div>
         )}
       </AnimatePresence>

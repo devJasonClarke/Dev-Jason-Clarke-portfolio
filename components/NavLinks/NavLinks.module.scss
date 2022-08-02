@@ -73,6 +73,13 @@
   }
 }
 
+@media screen and (max-width: 1000px) and (orientation:landscape) {
+  .nav-links {
+  height: 80vh;
+  overflow-y: auto;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .hover-link {
     font-size: 45px;

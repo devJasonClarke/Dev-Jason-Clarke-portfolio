@@ -10,6 +10,13 @@ export default function Home({ page, blogs }) {
   return (
     <>
       <Hero data={page} />
+      <SectionPadding/>
+      <SectionPadding/>
+      <SectionPadding/>
+      <SectionPadding/>
+      <SectionPadding/>
+      <SectionPadding/>
+      <SectionPadding/>
     </>
   );
 }
