@@ -3,6 +3,9 @@ import styles from "./Hero.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+
+const Jarallax = dynamic(() => import('../Jarallax/Jarallax.jsx'), { ssr: false });
 
 const Hero = ({ data }) => {
   const [theData, setTheData] = useState();
@@ -11,7 +14,18 @@ const Hero = ({ data }) => {
   useEffect(() => setTheData(data), [data]);
 
   return (
-    <header className={styles.header}>
+    <header>
+        <Jarallax className={styles.header} speed={0.2} videoSrc="https://youtu.be/S4L8T2kFFck">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        <PrismicRichText field={theData?.data?.hero_heading} />
+      </motion.div>
+        </Jarallax>
+    </header>
+   /*  <header className={styles.header}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +33,7 @@ const Hero = ({ data }) => {
       >
         <PrismicRichText field={theData?.data?.hero_heading} />
       </motion.div>
-    </header>
+    </header> */
   );
 };
 export default Hero;

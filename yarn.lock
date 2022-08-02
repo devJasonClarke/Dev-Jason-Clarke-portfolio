@@ -1249,6 +1249,13 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
+jarallax@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/jarallax/-/jarallax-2.0.4.tgz#8ea760480119d0f0b3493c72d99dfce768a1b214"
+  integrity sha512-vvQXYiRsjhmuD6vmgnkbzFWUBTmOXUFK4ncD8bUQ74rUAaRHFAwE3m4pbOqmxecdljWXtufA4EYVu67+L8PKBA==
+  dependencies:
+    video-worker "^2.0.0"
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -1895,6 +1902,11 @@ v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
+
+video-worker@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/video-worker/-/video-worker-2.0.0.tgz#22bce64fa1a0b04f46f0066c37de72a3a8463241"
+  integrity sha512-hdah9eSOaxDgj8SSE82HQkj4yzgXVK91ceMqJc6/0Q+M2710LTy7J1Jxgw5RDSPRfgMc68YuFtgptnodsje5Fw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
