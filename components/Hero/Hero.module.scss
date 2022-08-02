@@ -6,7 +6,6 @@
   align-items: flex-end;
   position: relative;
   bottom: 100px;
-  left: -60px;
 
   h1 {
     color: white;
@@ -27,11 +26,10 @@
 
 @media screen and (max-width: 1000px) {
   .container {
-    left: 0px;
     h1 {
       padding: 0 30px;
       width: 100%;
-      max-width:800px;;
+      max-width: 800px;
     }
   }
 }

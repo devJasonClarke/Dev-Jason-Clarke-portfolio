@@ -2,18 +2,19 @@ import NavLinks from "../NavLinks/NavLinks";
 import Image from "next/image";
 import styles from "./Nav.module.scss";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import Link from "next/link";
 
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <Image
-        src="https://devjasonclarke.com/img/icons/React.svg"
-        alt="logo"
-        width="40"
-        height={40}
-      />
+      <Link href="/">
+        <a className={styles.logo}>
+          <span>Dev</span>
+          <span>Jason</span>
+        </a>
+      </Link>
       <NavLinks />
-      <MobileMenu/>
+      <MobileMenu />
     </nav>
   );
 };
