@@ -5,7 +5,7 @@ const initialState = {
     { name: "Home", route: "/" },
     { name: "About", route: "/about" },
     { name: "Blog", route: "/blog" },
-    { name: "Portfolio", route: "/portfolio" },
+    { name: "Work", route: "/work" },
     { name: "Contact", route: "/contact" },
   ],
 };

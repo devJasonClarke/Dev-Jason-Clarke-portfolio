@@ -1,16 +1,17 @@
 .container {
   line-height: 1.5;
-  max-width: 860px;
+  max-width: 680px;
   margin: 0 auto;
-  h1 {
-    font-size: 45px;
+  h2 {
+    font-size: 30px;
+    margin-left: 96px;
   }
 }
 
 .work-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 45px;
+  gap: 45px 60px;
 }
 
 @media screen and (max-width: 765px) {

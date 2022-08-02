@@ -1,0 +1,46 @@
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 7;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0.1px;
+  background-color: #101010;
+  margin-top: 0.01px;
+}
+
+.img-container {
+  position: relative;
+
+  margin-top: 15px;
+}
+
+.img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.text-container {
+
+  .date {
+    font-size: 14px;
+    color: #BBBBBB;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 10px 0;
+  }
+
+  .desc {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #BBBBBB;
+  }
+}
