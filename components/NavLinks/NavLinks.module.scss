@@ -12,42 +12,6 @@
   li {
     list-style: none;
     text-decoration: none;
-
-    a {
-      position: relative;
-      font-size: 16px;
-      padding: 10px 0px;
-      z-index: 1;
-      transition: 0.4s all ease;
-      color: rgba(255, 255, 255, 0.6);
-      font-weight: bold;
-
-      &:hover {
-        color: white;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: -0.25em;
-        right: -0.25em;
-        background-color: var(--grey);
-        transform-origin: bottom center;
-        transform: scaleY(0);
-        transition: all 0.15s ease-in-out;
-        opacity: 0.1;
-        border-radius: 5px;
-      }
-
-      &:hover::before {
-        transform: scaleY(1);
-        background-color: var(--grey);
-        opacity: 0.1;
-      }
-    }
   }
 }
 
@@ -97,9 +61,21 @@
   transform: translateY(-200%);
 }
 
-
 @media screen and (max-width: 1000px) {
-  .nav-links{
-    display: none;
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hover-link {
+    font-size: 60px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hover-link {
+    font-size: 45px;
+    padding: 15px;
   }
 }

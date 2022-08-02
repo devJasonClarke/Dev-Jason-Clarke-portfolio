@@ -4,7 +4,6 @@ import Nav from "../components/Nav/Nav";
 import SectionPadding from "../components/SectionPadding/SectionPadding";
 import AboutSection from "../components/AboutSection/AboutSection";
 import BlogSection from "../components/BlogSection/BlogSection";
-
 export default function Home({ page, blogs }) {
   console.log(page);
   console.log(blogs);

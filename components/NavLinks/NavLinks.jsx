@@ -1,28 +1,28 @@
 import styles from "./NavLinks.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
-const NavLinks = () => {
+import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
+
+const NavLinks = ({ delay }) => {
   const router = useRouter();
-  const [routes] = useState([
-    { name: "Home", route: "/" },
-    { name: "About", route: "/about" },
-    { name: "Blog", route: "/blog" },
-    { name: "Portfolio", route: "/portfolio" },
-    { name: "Contact", route: "/contact" },
-  ]);
+  const routes = useSelector((state) => state.links.routes);
 
   return (
     <ul className={styles["nav-links"]}>
       {routes.map((data, index) => {
         return (
-          <li
+          <motion.li
             key={index}
+            initial={{ y: "20px", opacity: 0 }}
+            animate={{ y: "0", opacity: 1 }}
+            transition={{ duration: 0.3, delay: index * delay }}
             className={
-              router.asPath  === `${data.route}`
+              router.asPath === `${data.route}`
                 ? `${styles.active} ${styles["hover-link"]}`
                 : `${styles["hover-link"]}`
             }
+            exit={{ opacity: 0, transition: { duration: 0.3, delay: 0 } }}
           >
             <Link href={data.route} area-label="Hover">
               <span>
@@ -34,7 +34,7 @@ const NavLinks = () => {
                 </span>
               </span>
             </Link>
-          </li>
+          </motion.li>
         );
       })}
     </ul>

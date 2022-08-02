@@ -1,11 +1,18 @@
 @import "~delicious-hamburgers/scss/base";
 @import "~delicious-hamburgers/scss/animations/shelf";
 
-.mobile-menu {
+.hamburger-menu {
+  z-index: 1000;
+  position: relative;
+}
+.menu-container{
   display: none;
 }
-
+.hamburger{
+  z-index: 1000;
+}
 .inner, .bar{
+  z-index: 1000;
     background-color: white !important;
     &:nth-child(1),
     &:nth-child(2),
@@ -17,8 +24,31 @@
     }
 }
 
+.mobile-menu{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  background-color: #1E1E1E;
+}
+
 @media screen and (max-width: 1000px) {
-  .mobile-menu {
+  .menu-container{
     display: block;
   }
+  .mobile-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.div{
+  display: block;
+  z-index: 4;
+  background-color: white;
+  width: 50px;
+  height: 50px;
 }
