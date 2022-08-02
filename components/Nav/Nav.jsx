@@ -8,11 +8,7 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a
-         initial={{  opacity: 0 }}
-         animate={{ opacity: 1 }}
-         transition={{ duration: 0.5 }}
-          className={styles.logo}>
+        <a className={styles.logo}>
           <span>Dev</span>
           <span>Jason</span>
         </a>
