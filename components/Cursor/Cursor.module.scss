@@ -1,0 +1,15 @@
+#cursor {
+  display: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: rgba(75, 255, 165, 0.4);
+  transform: translateY(-12px) translateX(-13px);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #cursor {
+    display: none;
+  }
+}
