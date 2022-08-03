@@ -6,29 +6,13 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import BlogSection from "../components/BlogSection/BlogSection";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 
-import { useSelector, useDispatch } from "react-redux";
-import { populateHomepage } from "redux/cms/cmsSlice";
-import { useEffect } from "react";
-
 export default function Home({ page, blogs }) {
-  /*   console.log(page);
-  console.log(blogs);
- */
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(populateHomepage({ page }));
-  }, [page, dispatch]);
-  const routes = useSelector((state) => state.cms.cms.homepage.data?.counter);
-  console.log(`routes: ${routes}`);
   return (
     <>
       <Hero data={page} />
-      {/* <h1> {routes}</h1> */}
       <BlogSection data={blogs} />
       <PortfolioSection />
-       <SectionPadding color={"black"} />
+      <SectionPadding color={"black"} />
     </>
   );
 }
