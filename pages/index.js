@@ -28,7 +28,7 @@ export default function Home({ page, blogs }) {
       {/* <h1> {routes}</h1> */}
       <BlogSection data={blogs} />
       <PortfolioSection />
-      <SectionPadding color={"black"} />
+       <SectionPadding color={"black"} />
     </>
   );
 }
