@@ -12,7 +12,7 @@ const BlogCard = ({ blog }) => {
         <div className={styles.card}>
           <div className={styles["img-container"]}>
             <motion.img
-              src="https://images.unsplash.com/photo-1515704089429-fd06e6668458?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src={blog.data.image[0]?.text}
               alt="img"
               className={styles.img}
             />

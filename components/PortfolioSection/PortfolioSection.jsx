@@ -17,6 +17,7 @@ const PortfolioSection = ({ data }) => {
       <div className={styles.container}>
         <h1>Work</h1>
         <p>A few of the projects i&apos;ve woked on</p>
+        <p>AKA didn&apos;t sign an NDA</p>
 
         <div className={styles["work-container"]}>
           <PortfolioCard />
