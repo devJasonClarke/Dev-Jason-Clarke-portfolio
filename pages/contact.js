@@ -1,19 +1,19 @@
 import Hero from "@/components/@/Hero/Hero";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
 
-const Blog = () => {
+const Contact = () => {
   return (
     <div>
       <MetaTags
-        title="Blog"
-        description="Blog articles I've published"
+        title="Contact"
+        description="Get in touch"
         image={0}
       />
 
       <Hero />
-      <h1>Blog</h1>
+      <h1>Contact</h1>
     </div>
   );
 };
 
-export default Blog;
+export default Contact;

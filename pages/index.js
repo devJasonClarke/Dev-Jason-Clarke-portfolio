@@ -5,10 +5,16 @@ import SectionPadding from "../components/SectionPadding/SectionPadding";
 import AboutSection from "../components/AboutSection/AboutSection";
 import BlogSection from "../components/BlogSection/BlogSection";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
+import MetaTags from "../components/MetaTags/MetaTags";
 
 export default function Home({ page, blogs }) {
   return (
     <>
+      <MetaTags
+        title="Home"
+        description="Hello, my name is Jason. Welcome to my website"
+        image={0}
+      />
       <Hero data={page} />
       <BlogSection data={blogs} />
       <PortfolioSection />

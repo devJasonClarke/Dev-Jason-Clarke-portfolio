@@ -1,11 +1,17 @@
 import { createClient } from "../../prismicio";
 import { PrismicText, PrismicRichText } from "@prismicio/react";
 import Hero from "@/components/@/Hero/Hero";
+import MetaTags from "@/components/@/MetaTags/MetaTags";
 
 const BlogPost = ({ document }) => {
   return (
     <div>
-      <Hero/>
+      <MetaTags
+        title={document.data.title[0].text}
+        description={document.data.introduction[0].text}
+        image={document.data.image[0].text}
+      />
+      <Hero />
       <PrismicText field={document.data.title} />
       <PrismicRichText field={document.data.article} />
     </div>
