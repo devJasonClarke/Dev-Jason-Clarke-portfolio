@@ -11,8 +11,8 @@ export default function Home({ page, blogs }) {
   return (
     <>
       <Hero data={page} />
-      <PortfolioSection />
       <BlogSection data={blogs}/>
+      <PortfolioSection />
     </>
   );
 }

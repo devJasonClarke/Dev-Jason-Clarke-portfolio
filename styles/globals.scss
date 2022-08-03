@@ -40,12 +40,16 @@ button {
   --regular-font: 16px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   :root {
     /*   Spacing */
-    --large-padding: 60px;
-    --regular-padding: 30px 60px;
-    --page-width: 1400px;
+    --large-padding: 60px 30px;
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
 
     /*   font size */
     --large-font: 34px;

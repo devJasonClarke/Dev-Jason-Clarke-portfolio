@@ -10,7 +10,7 @@ const PortfolioCard = () => {
           whileInView={{ height: "0" }}
           initial={{ height: "100%" }}
           transition={{
-            duration: 1.2,
+            duration: 1,
             delay: 1,
             ease: "easeInOut",
           }}
