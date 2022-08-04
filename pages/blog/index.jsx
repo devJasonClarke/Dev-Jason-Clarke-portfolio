@@ -24,7 +24,7 @@ const Blog = ({ blogs }) => {
           ])
         : (paginatedArr = [arr]);
 
-    chunkArray(blogs, 1);
+    chunkArray(blogs, 6);
 
     dispatch(setArr(paginatedArr));
     dispatch(setArrLenght(paginatedArr.length));
