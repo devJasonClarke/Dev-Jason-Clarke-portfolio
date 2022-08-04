@@ -13,6 +13,11 @@
   &:nth-child(1) {
     margin-right: 30px;
   }
+  transition: 0.3s all ease-in-out;
+
+  &:hover{
+  transform: scale(0.9);
+  }
 }
 
 .disable {
