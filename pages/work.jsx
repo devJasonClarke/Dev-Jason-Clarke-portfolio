@@ -3,7 +3,7 @@ import Hero from "@/components/@/Hero/Hero";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 
-const Work = ({work}) => {
+const Work = ({ work }) => {
   return (
     <div>
       <MetaTags
@@ -12,9 +12,8 @@ const Work = ({work}) => {
         image={0}
       />
 
-      <Hero />
-      <PortfolioSection data={work}/>
-
+      <Hero data={work} />
+      <PortfolioSection data={work} />
     </div>
   );
 };
@@ -24,9 +23,7 @@ export default Work;
 export async function getServerSideProps({ previewData }) {
   const client = createClient({ previewData });
 
-
   const work = await client.getByUID("portfolio", "portfolio");
-
 
   return {
     props: { work }, // Will be passed to the page component as props

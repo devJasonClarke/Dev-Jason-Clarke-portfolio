@@ -1,3 +1,4 @@
+import { PrismicText } from "@prismicio/react";
 import SectionPadding from "../SectionPadding/SectionPadding";
 import styles from "./ContactSection.module.scss";
 const ContactSection = ({ data }) => {
@@ -5,7 +6,7 @@ const ContactSection = ({ data }) => {
   return (
     <SectionPadding color={"black"}>
       <div className={styles.container}>
-        <h1>Contact</h1>
+        <h1><PrismicText field={data?.data.title}/></h1>
         {data?.data.contacts.map((document) => (
           <div key={document.name[0].text}>
             <p className={styles.title}>{document.name[0].text}</p>

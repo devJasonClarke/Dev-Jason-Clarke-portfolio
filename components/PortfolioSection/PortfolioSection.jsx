@@ -1,5 +1,5 @@
 import styles from "./PortfolioSection.module.scss";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, PrismicText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
@@ -15,7 +15,7 @@ const PortfolioSection = ({ data }) => {
   return (
     <SectionPadding color="grey">
       <div className={styles.container}>
-        <h1>Work</h1>
+        <h1><PrismicText field={theData?.data.title} /></h1>
         <p>A few projects that I&apos;ve worked on</p>
         <div className={styles["work-container"]}>
           {data?.data.projects.map((document) => (

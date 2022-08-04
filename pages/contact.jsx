@@ -13,7 +13,7 @@ const Contact = ({contact}) => {
         image={0}
       />
 
-      <Hero />
+      <Hero  data={contact}/>
       <ContactSection data={contact}/>
     </div>
   );

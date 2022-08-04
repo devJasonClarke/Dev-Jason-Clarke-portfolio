@@ -1,16 +1,16 @@
-import styles from "./Hero.module.scss";
+import styles from "./BlogHero.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Nav from "../Nav/Nav";
+
 import Image from "next/image";
 
 const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
   ssr: false,
 });
 
-const Hero = ({ data }) => {
+const BlogHero = ({ data }) => {
   const [theData, setTheData] = useState();
   // During hydration `useEffect` is called. `window` is available in `useEffect`. In this case because we know we're in the browser checking for window is not needed. If you need to read something from window that is fine.
   // By calling `setColor` in `useEffect` a render is triggered after hydrating, this causes the "browser specific" value to be available. In this case 'red'.
@@ -29,22 +29,12 @@ const Hero = ({ data }) => {
           layout="fill"
         />
         <motion.div
-          className={
-            theData?.data?.hero_heading
-              ? styles.container
-              : `${styles.container} ${styles.alt}`
-          }
+          className={styles.container}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <PrismicRichText
-            field={
-              theData?.data?.hero_heading
-                ? theData?.data?.hero_heading
-                : theData?.data?.title
-            }
-          />
+          <PrismicRichText field={theData?.data?.title} />
         </motion.div>
       </Jarallax>
     </header>
@@ -54,9 +44,9 @@ const Hero = ({ data }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        <PrismicRichText field={theData?.data?.hero_heading} />
+        <PrismicRichText field={theData?.data?.BlogHero_heading} />
       </motion.div>
     </header> */
   );
 };
-export default Hero;
+export default BlogHero;

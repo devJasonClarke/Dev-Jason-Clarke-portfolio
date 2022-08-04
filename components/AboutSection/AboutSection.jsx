@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./AboutSection.module.scss";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, PrismicText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import SectionPaddingAlt from "../SectionPaddingAlt/SectionPaddingAlt";
+import SectionPadding from "../SectionPadding/SectionPadding";
 
 const AboutSection = ({ data }) => {
   const [theData, setTheData] = useState();
@@ -12,21 +12,14 @@ const AboutSection = ({ data }) => {
   useEffect(() => setTheData(data), [data]);
 
   return (
-    <SectionPaddingAlt color="grey">
+    <SectionPadding color="black">
       <div className={styles.container}>
-        <h1>About Me</h1>
-        <p>
-          I am a software engineer with a history of working with modern
-          technologies to solve complex issues. You usually find me coding the
-          front end or chilling with the UX/UI designers.
-        </p>
-        <p>
-          These days I use in HMTL, CSS, Javascript, React.Js, Vue.Js, Nuxt.Js,
-          Next.Js and REST APIs to build amazing software and implement
-          successful features.
-        </p>
+        <h1>
+          <PrismicText field={theData?.data.title} />
+        </h1>
+        <PrismicRichText field={theData?.data.info} />
       </div>
-    </SectionPaddingAlt>
+    </SectionPadding>
   );
 };
 export default AboutSection;

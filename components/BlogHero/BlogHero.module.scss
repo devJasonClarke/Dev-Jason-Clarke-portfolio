@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  bottom: 100px;
+  bottom: 220px;
 
   h1 {
     color: white;
@@ -24,16 +24,10 @@
   }
 }
 
-.alt {
-  bottom: 220px;
-}
-
 @media screen and (max-width: 1000px) {
-  .alt {
+  .container {
     align-items: center;
     bottom: 0px;
-  }
-  .container {
     h1 {
       padding: 0 30px;
       width: 100%;
