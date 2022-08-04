@@ -6,7 +6,7 @@ import styles from "./PortfolioCard.module.scss";
 const PortfolioCard = ({ document }) => {
   return (
     <Link href={document.url[0].text}>
-      <a target="_blank" rel="noopener noreferrer">
+      <a target="_blank" rel="noopener noreferrer" className={styles.card}>
         <div className={styles["img-container"]}>
           <motion.div
             className={`${styles.bg}`}

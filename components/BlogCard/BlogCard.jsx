@@ -7,7 +7,7 @@ import Link from "next/link";
 const BlogCard = ({ blog }) => {
   return (
     <Link href={`blog/${blog.uid}`}>
-      <a>
+      <a className={styles.card}>
         {" "}
         <div className={styles.card}>
           <div className={styles["img-container"]}>
