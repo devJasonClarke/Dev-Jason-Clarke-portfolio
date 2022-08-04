@@ -4,10 +4,10 @@ const initialState = {
   cms: {
     homepage: {
       counter: 0,
-      data: {},
+      data: {}
     },
-    counter: 22,
-  },
+    counter: 22
+  }
 };
 
 export const cmsSlice = createSlice({
@@ -17,8 +17,8 @@ export const cmsSlice = createSlice({
     populateHomepage: (state, payload) => {
       state.cms.homepage.counter = 1;
       state.cms.homepage.data = payload.payload;
-    },
-  },
+    }
+  }
 });
 
 export const { populateHomepage } = cmsSlice.actions;

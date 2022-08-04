@@ -20,7 +20,7 @@ const Blog = ({ blogs }) => {
       arr.length > size
         ? (paginatedArr = [
             arr.slice(0, size),
-            ...chunkArray(arr.slice(size), size),
+            ...chunkArray(arr.slice(size), size)
           ])
         : (paginatedArr = [arr]);
 
@@ -29,7 +29,6 @@ const Blog = ({ blogs }) => {
     dispatch(setArr(paginatedArr));
     dispatch(setArrLenght(paginatedArr.length));
   }, [blogs, dispatch]);
-
 
   return (
     <div>
@@ -55,11 +54,11 @@ export async function getServerSideProps({ previewData }) {
   const blogs = await client.getAllByType("blog_post", {
     orderings: {
       field: "my.blog_post.timestamp",
-      direction: "desc",
-    },
+      direction: "desc"
+    }
   });
 
   return {
-    props: { blogs }, // Will be passed to the page component as props
+    props: { blogs } // Will be passed to the page component as props
   };
 }

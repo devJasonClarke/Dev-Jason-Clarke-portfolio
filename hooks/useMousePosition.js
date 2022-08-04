@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 const useMousePosition = () => {
   const [position, setPosition] = useState({
     clientX: -1000,
-    clientY: -1000,
+    clientY: -1000
   });
 
-  const updatePosition = event => {
+  const updatePosition = (event) => {
     const { pageX, pageY, clientX, clientY } = event;
 
     setPosition({
       clientX,
-      clientY,
+      clientY
     });
   };
 

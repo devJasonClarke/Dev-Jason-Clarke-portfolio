@@ -83,7 +83,7 @@ const DateFormat = (date) => {
             pad(Math.floor(Math.abs(o) / 60) * 100 + (Math.abs(o) % 60), 4),
           S: ["th", "st", "nd", "rd"][
             d % 10 > 3 ? 0 : (((d % 100) - (d % 10) != 10) * d) % 10
-          ],
+          ]
         };
 
       return mask.replace(token, function ($0) {
@@ -105,7 +105,7 @@ const DateFormat = (date) => {
     isoDate: "yyyy-mm-dd",
     isoTime: "HH:MM:ss",
     isoDateTime: "yyyy-mm-dd'T'HH:MM:ss",
-    isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'",
+    isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'"
   };
 
   // Internationalization strings
@@ -124,7 +124,7 @@ const DateFormat = (date) => {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturday",
+      "Saturday"
     ],
     monthNames: [
       "January",
@@ -138,8 +138,8 @@ const DateFormat = (date) => {
       "September",
       "October",
       "November",
-      "December",
-    ],
+      "December"
+    ]
   };
 
   // For convenience...

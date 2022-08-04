@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 
 const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
-  ssr: false,
+  ssr: false
 });
 
 const BlogHero = () => {

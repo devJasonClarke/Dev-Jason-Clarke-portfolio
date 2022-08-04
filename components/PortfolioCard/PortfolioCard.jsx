@@ -15,7 +15,7 @@ const PortfolioCard = ({ document }) => {
             transition={{
               duration: 1,
               delay: 1,
-              ease: "easeInOut",
+              ease: "easeInOut"
             }}
             viewport={{ once: true }}
           ></motion.div>

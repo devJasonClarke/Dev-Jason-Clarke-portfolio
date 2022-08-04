@@ -9,7 +9,7 @@ const Cursor = () => {
       style={{
         position: "fixed",
         left: clientX,
-        top: clientY,
+        top: clientY
       }}
     ></div>
   );

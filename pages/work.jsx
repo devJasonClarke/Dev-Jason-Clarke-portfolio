@@ -26,6 +26,6 @@ export async function getServerSideProps({ previewData }) {
   const work = await client.getByUID("portfolio", "portfolio");
 
   return {
-    props: { work }, // Will be passed to the page component as props
+    props: { work } // Will be passed to the page component as props
   };
 }

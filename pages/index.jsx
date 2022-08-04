@@ -15,8 +15,8 @@ export default function Home({ page, blogs, work, contact }) {
       />
       <Hero data={page} />
       <BlogSection data={blogs} />
-      <PortfolioSection data={work}/>
-      <ContactSection data={contact}/>
+      <PortfolioSection data={work} />
+      <ContactSection data={contact} />
     </>
   );
 }
@@ -29,14 +29,14 @@ export async function getServerSideProps({ previewData }) {
     pageSize: 4,
     orderings: {
       field: "my.blog_post.timestamp",
-      direction: "desc",
-    },
+      direction: "desc"
+    }
   });
   const page = await client.getByUID("homepage", "index");
   const work = await client.getByUID("portfolio", "portfolio");
   const contact = await client.getByUID("contacts", "contact");
 
   return {
-    props: { page, blogs, work, contact }, // Will be passed to the page component as props
+    props: { page, blogs, work, contact } // Will be passed to the page component as props
   };
 }

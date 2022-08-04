@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Nav />
       {children}
-{/*       <Cursor/> */}
+      {/*       <Cursor/> */}
       <Footer />
     </>
   );

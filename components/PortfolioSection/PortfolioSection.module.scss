@@ -4,9 +4,9 @@
   margin: 0 auto;
   h1 {
     font-size: 45px;
-font-weight: bold;
+    font-weight: bold;
   }
-} 
+}
 
 .work-container {
   display: grid;
@@ -23,7 +23,7 @@ font-weight: bold;
 
 @media screen and (max-width: 350px) {
   .work-container {
-   gap: 0 60px;
-   justify-items: flex-start;
+    gap: 0 60px;
+    justify-items: flex-start;
   }
 }

@@ -13,7 +13,9 @@ const PortfolioSection = ({ data }) => {
   return (
     <SectionPadding color="grey">
       <div className={styles.container}>
-        <h1><PrismicText field={theData?.data.title} /></h1>
+        <h1>
+          <PrismicText field={theData?.data.title} />
+        </h1>
         <p>A few projects that I&apos;ve worked on</p>
         <div className={styles["work-container"]}>
           {data?.data.projects.map((document) => (

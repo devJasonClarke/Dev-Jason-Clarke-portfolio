@@ -11,7 +11,7 @@ const BlogPageSection = ({ data, children }) => {
 
   return (
     <SectionPadding color="black">
-      <div className={styles.container} id='blog'>
+      <div className={styles.container} id="blog">
         <h1>Latest Posts</h1>
 
         <div className={styles["work-container"]}>
@@ -20,11 +20,9 @@ const BlogPageSection = ({ data, children }) => {
               <BlogCard blog={document} />
             </div>
           ))}
-
         </div>
         {children}
       </div>
-    
     </SectionPadding>
   );
 };

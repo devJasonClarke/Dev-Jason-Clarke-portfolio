@@ -1,0 +1,6 @@
+!/.*
+/build/
+/dist/
+/test-config/
+.vscode
+/.next/

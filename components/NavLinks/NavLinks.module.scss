@@ -73,10 +73,10 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (orientation:landscape) {
+@media screen and (max-width: 1000px) and (orientation: landscape) {
   .nav-links {
-  height: 80vh;
-  overflow-y: auto;
+    height: 80vh;
+    overflow-y: auto;
   }
 }
 

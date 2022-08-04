@@ -9,7 +9,7 @@ body {
 body {
   overflow-x: hidden !important;
 }
-h1{
+h1 {
   margin-top: 0;
 }
 a {
@@ -46,13 +46,11 @@ button {
   :root {
     /*   Spacing */
     --large-padding: 60px 30px;
-
   }
 }
 
 @media screen and (max-width: 500px) {
   :root {
-
     /*   font size */
     --large-font: 34px;
     --regular-font: 16px;

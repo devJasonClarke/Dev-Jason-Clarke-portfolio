@@ -5,63 +5,60 @@
   z-index: 1000;
   position: relative;
 }
-.menu-container{
+.menu-container {
   display: none;
 }
-.hamburger{
+.hamburger {
   z-index: 1000;
 }
-.inner, .bar{
+.inner,
+.bar {
   z-index: 1000;
-    background-color: white !important;
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-        &::before,
-        &::after {
-            background-color: white !important;
-        }
+  background-color: white !important;
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    &::before,
+    &::after {
+      background-color: white !important;
     }
+  }
 }
 
-.mobile-menu{
+.mobile-menu {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   width: 100vw;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }
 
 @media screen and (max-width: 1000px) {
-  .menu-container{
+  .menu-container {
     display: block;
-
   }
-  .mobile-menu{
+  .mobile-menu {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-
-  .fixed{
+  .fixed {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
 
-
-     .hamburger-menu{
-    position: fixed;
-    right: 30px;
-    top: 45px
-  } 
+    .hamburger-menu {
+      position: fixed;
+      right: 30px;
+      top: 45px;
+    }
   }
-
 }
 
-.div{
+.div {
   display: block;
   z-index: 4;
   background-color: white;

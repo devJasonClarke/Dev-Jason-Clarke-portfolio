@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  img: "",
+  img: ""
 };
 
 export const blogHeroImgSlice = createSlice({
   name: "blogHeroImg",
   initialState,
-  reducers: {},
+  reducers: {}
 });
 
 export default blogHeroImgSlice.reducer;

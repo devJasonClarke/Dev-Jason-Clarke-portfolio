@@ -25,7 +25,7 @@ export async function getServerSideProps({ params, previewData }) {
   const document = await client.getByUID("blog_post", params.blog);
 
   return {
-    props: { document }, // Will be passed to the page component as props
+    props: { document } // Will be passed to the page component as props
   };
 }
 

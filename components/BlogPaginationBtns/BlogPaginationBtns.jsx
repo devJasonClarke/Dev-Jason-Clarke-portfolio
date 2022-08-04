@@ -8,7 +8,7 @@ const BlogPaginationBtns = () => {
   const arr = useSelector((state) => state.blogPage.arr);
   const arrLength = useSelector((state) => state.blogPage.arrLength);
   const dispatch = useDispatch();
-  
+
   const nextPage = () => {
     if (page < arr?.length - 1) {
       dispatch(nextBlogPage());
