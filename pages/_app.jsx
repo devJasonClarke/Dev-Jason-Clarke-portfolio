@@ -4,7 +4,6 @@ import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismicio";
 import Layout from "../components/Layout/Layout";
-import { configureStore } from "@reduxjs/toolkit";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
 

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import styles from "./AboutSection.module.scss";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SectionPadding from "../SectionPadding/SectionPadding";
 

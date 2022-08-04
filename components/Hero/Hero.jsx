@@ -3,7 +3,6 @@ import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Nav from "../Nav/Nav";
 import Image from "next/image";
 
 const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {

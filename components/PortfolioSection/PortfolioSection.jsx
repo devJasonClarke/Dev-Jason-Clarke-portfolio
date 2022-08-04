@@ -1,8 +1,6 @@
 import styles from "./PortfolioSection.module.scss";
-import { PrismicRichText, PrismicText } from "@prismicio/react";
-import { motion } from "framer-motion";
+import { PrismicText } from "@prismicio/react";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import SectionPadding from "../SectionPadding/SectionPadding";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
 
