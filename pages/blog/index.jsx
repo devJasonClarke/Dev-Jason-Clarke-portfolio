@@ -28,9 +28,8 @@ const Blog = ({ blogs }) => {
 
     dispatch(setArr(paginatedArr));
     dispatch(setArrLenght(paginatedArr.length));
-    
   }, [blogs, dispatch]);
-  console.log(arr?.[0]?.[0]);
+
 
   return (
     <div>

@@ -1,22 +1,23 @@
-.container{
-margin-top: 30px;
+.container {
+  margin-top: 30px;
 }
 
-.button{
-    display: inline-block;
-    margin-top: 30px;
-    font-size: 20px;
-    padding: 10px 15px;
-    background-color: #e0e0e0;
-    border: 2px solid #e0e0e0;
-    color: black;
-    &:nth-child(1){
-        margin-right: 30px;
-    }
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+
+  color: black;
+  &:nth-child(1) {
+    margin-right: 30px;
+  }
 }
 
-.disable{
-    background-color: rgba(224, 224, 224, 0.431);
-    border: 2px solid rgba(224, 224, 224, 0.431);
-    pointer-events: none;
+.disable {
+  background-color: rgba(224, 224, 224, 0.431);
+  border: none;
+  outline: transparent;
+  pointer-events: none;
 }

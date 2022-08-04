@@ -2,7 +2,7 @@ import { PrismicText } from "@prismicio/react";
 import SectionPadding from "../SectionPadding/SectionPadding";
 import styles from "./ContactSection.module.scss";
 const ContactSection = ({ data }) => {
-  console.log(data);
+
   return (
     <SectionPadding color={"black"}>
       <div className={styles.container}>
