@@ -1,7 +1,7 @@
 import { createClient } from "../../prismicio";
 import { PrismicText, PrismicRichText } from "@prismicio/react";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
-import BlogHero from "redux/blogHeroImg/blogHeroImg";
+import BlogHero from "@/components/@/BlogHero/BlogHero";
 
 const BlogPost = ({ document }) => {
   return (
