@@ -16,16 +16,13 @@ const PortfolioSection = ({ data }) => {
     <SectionPadding color="grey">
       <div className={styles.container}>
         <h1>Work</h1>
-        <p>A few of the projects i&apos;ve woked on</p>
-        <p>AKA didn&apos;t sign an NDA</p>
-
+        <p>A few projects that I&apos;ve worked on</p>
         <div className={styles["work-container"]}>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+          {data?.data.projects.map((document) => (
+            <div key={document.title[0].text}>
+              <PortfolioCard document={document} />
+            </div>
+          ))}
         </div>
       </div>
     </SectionPadding>

@@ -1,13 +1,11 @@
 import { createClient } from "../prismicio";
 import Hero from "../components/Hero/Hero";
-import Nav from "../components/Nav/Nav";
 import SectionPadding from "../components/SectionPadding/SectionPadding";
-import AboutSection from "../components/AboutSection/AboutSection";
 import BlogSection from "../components/BlogSection/BlogSection";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 import MetaTags from "../components/MetaTags/MetaTags";
 
-export default function Home({ page, blogs }) {
+export default function Home({ page, blogs, work }) {
   return (
     <>
       <MetaTags
@@ -17,7 +15,7 @@ export default function Home({ page, blogs }) {
       />
       <Hero data={page} />
       <BlogSection data={blogs} />
-      <PortfolioSection />
+      <PortfolioSection data={work}/>
       <SectionPadding color={"black"} />
     </>
   );
@@ -35,8 +33,9 @@ export async function getServerSideProps({ previewData }) {
     },
   });
   const page = await client.getByUID("homepage", "index");
+  const work = await client.getByUID("portfolio", "portfolio");
 
   return {
-    props: { page, blogs }, // Will be passed to the page component as props
+    props: { page, blogs, work }, // Will be passed to the page component as props
   };
 }

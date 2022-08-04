@@ -26,6 +26,11 @@
   object-fit: fill;
 }
 
+.text{
+  font-weight: bold;
+  font-size: 24px;
+}
+
 @media screen and (max-width: 500px) {
   .bg {
     width: 90vw;

@@ -18,7 +18,7 @@ const BlogSection = ({ data }) => {
         <h1>Latest Posts</h1>
 
         <div className={styles["work-container"]}>
-          {data.results.map((document, index) => (
+          {theData?.results.map((document, index) => (
             <div key={document.id}>
               <BlogCard blog={document} />
             </div>
