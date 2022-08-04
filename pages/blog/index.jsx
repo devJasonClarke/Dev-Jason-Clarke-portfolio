@@ -2,19 +2,16 @@ import { createClient } from "../../prismicio";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
 import BlogPageSection from "@/components/@/BlogPageSection/BlogPageSection";
 import BlogHero from "@/components/@/BlogHero/BlogHero";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setBlogPage, setArr } from "../../redux/blogPage/blogPage";
+import { setArr, setArrLenght } from "../../redux/blogPage/blogPage";
+import BlogPaginationBtns from "@/components/@/BlogPaginationBtns/BlogPaginationBtns";
 
 const Blog = ({ blogs }) => {
-  console.log(blogs);
-
   const page = useSelector((state) => state.blogPage.page);
-  const arr = useSelector((state) => state.blogPage.arrLength);
+  const arr = useSelector((state) => state.blogPage.arr);
 
   const dispatch = useDispatch();
-
-  console.log(page);
 
   useEffect(() => {
     const paginatedArr = [];
@@ -30,17 +27,10 @@ const Blog = ({ blogs }) => {
     chunkArray(blogs, 1);
 
     dispatch(setArr(paginatedArr));
+    dispatch(setArrLenght(paginatedArr.length));
+    
   }, [blogs, dispatch]);
   console.log(arr?.[0]?.[0]);
-
-  const nextPage = () => {
-    if (page < arr?.length - 1) {
-      dispatch(setBlogPage());
-
-      console.log("load more");
-    } else if (page) {
-    }
-  };
 
   return (
     <div>
@@ -52,7 +42,7 @@ const Blog = ({ blogs }) => {
       <BlogHero />
 
       <BlogPageSection data={arr?.[page]} pages={arr?.length}>
-        <button onClick={nextPage}>asdfa</button>
+        <BlogPaginationBtns />
       </BlogPageSection>
     </div>
   );
