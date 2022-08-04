@@ -26,9 +26,32 @@
   object-fit: fill;
 }
 
-.text{
+.text {
   font-weight: bold;
   font-size: 24px;
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .bg {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .bg {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .bg {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 720px) {
+  .bg {
+    width: 70vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
