@@ -4,10 +4,12 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
-const NavLinks = ({ delay }) => {
+const NavLinks = ({ delay, setTheToggle }) => {
   const router = useRouter();
   const routes = useSelector((state) => state.links.routes);
-
+  const toggle = () => {
+    setTheToggle(false);
+  };
   return (
     <ul className={styles["nav-links"]}>
       {routes.map((data, index) => {
@@ -25,7 +27,7 @@ const NavLinks = ({ delay }) => {
             exit={{ opacity: 0, transition: { duration: 0.3, delay: 0 } }}
           >
             <Link href={data.route} area-label="Hover">
-              <span>
+              <span onClick={toggle}>
                 <span>
                   {data.name}
                   <span>{data.name}</span>

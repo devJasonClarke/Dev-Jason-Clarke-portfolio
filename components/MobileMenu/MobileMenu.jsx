@@ -5,6 +5,9 @@ import NavLinks from "../NavLinks/NavLinks";
 
 const MobileMenu = () => {
   const [toggle, SetToggle] = useState(false);
+  const setTheToggle = (e) => {
+    SetToggle(e);
+  };
   return (
     <div
       className={
@@ -46,7 +49,7 @@ const MobileMenu = () => {
             transition={{ duration: 0.5 }}
             exit={{ height: "0%" }}
           >
-            <NavLinks delay={0.1} />
+            <NavLinks delay={0.1} setTheToggle={setTheToggle} />
           </motion.div>
         )}
       </AnimatePresence>
