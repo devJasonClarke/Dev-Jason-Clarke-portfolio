@@ -14,7 +14,7 @@
 
 .img-container {
   position: relative;
-
+  max-width: 400px;
   margin-top: 15px;
 }
 
@@ -25,10 +25,12 @@
 }
 
 .text-container {
+  display: block;
+  max-width: 400px;
 
   .date {
     font-size: 14px;
-    color: #BBBBBB;
+    color: #bbbbbb;
   }
 
   .title {
@@ -41,6 +43,17 @@
   .desc {
     font-size: 16px;
     text-transform: capitalize;
-    color: #BBBBBB;
+    color: #bbbbbb;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .img {
+    max-width: 260px;
+  }
+
+  .text-container {
+    display: block;
+    max-width: 260px;
   }
 }

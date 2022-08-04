@@ -20,3 +20,10 @@ font-weight: bold;
     justify-items: center;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .work-container {
+   gap: 0 60px;
+   justify-items: flex-start;
+  }
+}

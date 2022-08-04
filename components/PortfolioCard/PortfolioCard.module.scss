@@ -1,5 +1,3 @@
-
-
 .bg {
   position: absolute;
   left: 0;
@@ -21,8 +19,21 @@
 }
 
 .img {
+  display: block;
   width: 100%;
-  height: 500px ;
+  max-width: 90vw;
+  height: 500px;
   object-fit: fill;
+}
 
+@media screen and (max-width: 500px) {
+  .bg {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .img {
+    max-width: 260px;
+  }
 }
