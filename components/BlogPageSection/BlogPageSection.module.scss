@@ -1,0 +1,28 @@
+.container {
+  line-height: 1.5;
+  max-width: 860px;
+  margin: 0 auto;
+  h1 {
+    font-size: 45px;
+  }
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 45px;
+}
+
+@media screen and (max-width: 765px) {
+  .work-container {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .work-container {
+   gap: 0 60px;
+   justify-items: flex-start;
+  }
+}

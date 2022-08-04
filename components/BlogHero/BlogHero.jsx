@@ -1,7 +1,5 @@
 import styles from "./BlogHero.module.scss";
-import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 import Image from "next/image";
@@ -10,12 +8,7 @@ const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
   ssr: false,
 });
 
-const BlogHero = ({ data }) => {
-  const [theData, setTheData] = useState();
-  // During hydration `useEffect` is called. `window` is available in `useEffect`. In this case because we know we're in the browser checking for window is not needed. If you need to read something from window that is fine.
-  // By calling `setColor` in `useEffect` a render is triggered after hydrating, this causes the "browser specific" value to be available. In this case 'red'.
-  useEffect(() => setTheData(data), [data]);
-
+const BlogHero = () => {
   return (
     <header>
       <Jarallax
@@ -34,19 +27,10 @@ const BlogHero = ({ data }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <PrismicRichText field={theData?.data?.title} />
+          <h1>Blog</h1>
         </motion.div>
       </Jarallax>
     </header>
-    /*  <header className={styles.header}>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <PrismicRichText field={theData?.data?.BlogHero_heading} />
-      </motion.div>
-    </header> */
   );
 };
 export default BlogHero;
