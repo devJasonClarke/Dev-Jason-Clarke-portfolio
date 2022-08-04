@@ -4,8 +4,9 @@ import SectionPadding from "../components/SectionPadding/SectionPadding";
 import BlogSection from "../components/BlogSection/BlogSection";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 import MetaTags from "../components/MetaTags/MetaTags";
+import ContactSection from "../components/ContactSection/ContactSection";
 
-export default function Home({ page, blogs, work }) {
+export default function Home({ page, blogs, work, contact }) {
   return (
     <>
       <MetaTags
@@ -16,7 +17,7 @@ export default function Home({ page, blogs, work }) {
       <Hero data={page} />
       <BlogSection data={blogs} />
       <PortfolioSection data={work}/>
-      <SectionPadding color={"black"} />
+      <ContactSection data={contact}/>
     </>
   );
 }
@@ -34,8 +35,9 @@ export async function getServerSideProps({ previewData }) {
   });
   const page = await client.getByUID("homepage", "index");
   const work = await client.getByUID("portfolio", "portfolio");
+  const contact = await client.getByUID("contacts", "contact");
 
   return {
-    props: { page, blogs, work }, // Will be passed to the page component as props
+    props: { page, blogs, work, contact }, // Will be passed to the page component as props
   };
 }
