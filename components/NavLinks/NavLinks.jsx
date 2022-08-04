@@ -8,7 +8,9 @@ const NavLinks = ({ delay, setTheToggle }) => {
   const router = useRouter();
   const routes = useSelector((state) => state.links.routes);
   const toggle = () => {
-    setTheToggle(false);
+    if (window.innerWidth <= 1000) {
+      setTheToggle(false);
+    }
   };
   return (
     <ul className={styles["nav-links"]}>
