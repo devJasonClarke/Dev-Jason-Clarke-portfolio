@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./MobileMenu.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import NavLinks from "../NavLinks/NavLinks";
@@ -8,6 +8,13 @@ const MobileMenu = () => {
   const setTheToggle = (e) => {
     SetToggle(e);
   };
+  useEffect(() => {
+    if (!toggle) {
+      document.body.style.overflowY = "scroll";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
+  }, [toggle]);
   return (
     <div
       className={
@@ -26,11 +33,6 @@ const MobileMenu = () => {
           type="button"
           onClick={() => {
             SetToggle(!toggle);
-            if (toggle) {
-              document.body.style.overflowY = "scroll";
-            } else {
-              document.body.style.overflowY = "hidden";
-            }
           }}
         >
           <div className={styles.inner}>
