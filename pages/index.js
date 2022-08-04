@@ -1,6 +1,5 @@
 import { createClient } from "../prismicio";
 import Hero from "../components/Hero/Hero";
-import SectionPadding from "../components/SectionPadding/SectionPadding";
 import BlogSection from "../components/BlogSection/BlogSection";
 import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 import MetaTags from "../components/MetaTags/MetaTags";

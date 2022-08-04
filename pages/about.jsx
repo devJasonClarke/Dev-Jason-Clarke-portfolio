@@ -1,3 +1,5 @@
+import { createClient } from "../prismicio";
+import AboutSection from "../components/AboutSection/AboutSection";
 import Hero from "../components/Hero/Hero";
 import MetaTags from "../components/MetaTags/MetaTags";
 
@@ -10,7 +12,7 @@ const About = () => {
         image={0}
       />
       <Hero />
-      <h1>About</h1>
+      <AboutSection/>
     </div>
   );
 };

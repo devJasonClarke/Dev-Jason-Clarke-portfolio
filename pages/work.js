@@ -1,7 +1,9 @@
+import { createClient } from "../prismicio";
 import Hero from "@/components/@/Hero/Hero";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
+import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 
-const Work = () => {
+const Work = ({work}) => {
   return (
     <div>
       <MetaTags
@@ -11,9 +13,22 @@ const Work = () => {
       />
 
       <Hero />
-      <h1>Work</h1>
+      <PortfolioSection data={work}/>
+
     </div>
   );
 };
 
 export default Work;
+
+export async function getServerSideProps({ previewData }) {
+  const client = createClient({ previewData });
+
+
+  const work = await client.getByUID("portfolio", "portfolio");
+
+
+  return {
+    props: { work }, // Will be passed to the page component as props
+  };
+}

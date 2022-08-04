@@ -1,7 +1,10 @@
+import { createClient } from "../prismicio";
+
 import Hero from "@/components/@/Hero/Hero";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
+import ContactSection from "../components/ContactSection/ContactSection";
 
-const Contact = () => {
+const Contact = ({contact}) => {
   return (
     <div>
       <MetaTags
@@ -11,9 +14,19 @@ const Contact = () => {
       />
 
       <Hero />
-      <h1>Contact</h1>
+      <ContactSection data={contact}/>
     </div>
   );
 };
 
 export default Contact;
+
+export async function getServerSideProps({ previewData }) {
+  const client = createClient({ previewData });
+
+  const contact = await client.getByUID("contacts", "contact");
+
+  return {
+    props: { contact }, // Will be passed to the page component as props
+  };
+}

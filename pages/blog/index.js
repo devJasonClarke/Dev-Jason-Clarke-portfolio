@@ -1,3 +1,4 @@
+import { createClient } from "../../prismicio";
 import Hero from "@/components/@/Hero/Hero";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
 
