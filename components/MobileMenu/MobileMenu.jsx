@@ -23,12 +23,11 @@ const MobileMenu = () => {
           type="button"
           onClick={() => {
             SetToggle(!toggle);
-            if(toggle){
-              document.body.style.overflowY = 'scroll';
+            if (toggle) {
+              document.body.style.overflowY = "scroll";
             } else {
-              document.body.style.overflowY = 'hidden';
+              document.body.style.overflowY = "hidden";
             }
-            console.log(toggle);
           }}
         >
           <div className={styles.inner}>

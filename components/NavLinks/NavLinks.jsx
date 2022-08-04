@@ -26,8 +26,6 @@ const NavLinks = ({ delay }) => {
           >
             <Link href={data.route} area-label="Hover">
               <span>
-                {console.log(data.route)}
-                {console.log(router.pathname)}
                 <span>
                   {data.name}
                   <span>{data.name}</span>

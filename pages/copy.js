@@ -3,7 +3,6 @@ import { PrismicText, PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 
 export default function Home({ page }) {
-  console.log(page);
   return (
     <div>
       {/*  <PrismicText field={page.data.title} />

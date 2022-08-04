@@ -6,8 +6,6 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import BlogSection from "../components/BlogSection/BlogSection";
 
 export default function Home({ page, blogs }) {
-  console.log(page);
-  console.log(blogs);
   return (
     <>
       <Hero data={page} />
