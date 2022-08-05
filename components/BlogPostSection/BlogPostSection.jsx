@@ -15,18 +15,14 @@ const BlogPostSection = ({ data }) => {
   useEffect(() => {
     dispatch(setImg(img));
   }, [dispatch, img]);
-  
+
   return (
     <SectionPadding color={"grey"}>
       <div className={styles.container}>
         <h1>
           <PrismicText field={data?.data.title} />
         </h1>
-        <motion.img
-          src={img}
-          alt="img"
-          className={styles.img}
-        />
+        <motion.img src={img} alt="img" className={styles.img} />
         <div className={styles.author_container}>
           <p>
             Author: <PrismicText field={data?.data.author_name} />

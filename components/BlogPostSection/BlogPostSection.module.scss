@@ -15,32 +15,28 @@
 }
 
 .format {
-    line-height: 1.5;
+  line-height: 1.5;
   img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-  p{
+  p {
     margin-bottom: 30px;
   }
-  pre{
+  pre {
     display: inline;
     width: 100px;
-}
+  }
 }
 
-.author_container{
-    display: flex;
-    flex-wrap: wrap;
-p{
-    &:nth-child(2){
-        margin:auto 15px;
-    
-        
+.author_container {
+  display: flex;
+  flex-wrap: wrap;
+  p {
+    &:nth-child(2) {
+      margin: auto 15px;
     }
-}
-
-
+  }
 }

@@ -13,7 +13,6 @@ const BlogPost = ({ document }) => {
       />
       <BlogHero />
       <BlogPostSection data={document} />
-
     </div>
   );
 };
