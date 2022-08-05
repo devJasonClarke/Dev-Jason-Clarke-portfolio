@@ -57,3 +57,9 @@ button {
     --regular-font: 16px;
   }
 }
+@media screen and (max-width: 370px) {
+  :root {
+    /*   font size */
+    --hero-font: 35px;
+  }
+}

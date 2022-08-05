@@ -1,7 +1,7 @@
 import { createClient } from "../../prismicio";
-import { PrismicText, PrismicRichText } from "@prismicio/react";
 import MetaTags from "@/components/@/MetaTags/MetaTags";
 import BlogHero from "@/components/@/BlogHero/BlogHero";
+import BlogPostSection from "@/components/@/BlogPostSection/BlogPostSection";
 
 const BlogPost = ({ document }) => {
   return (
@@ -12,8 +12,8 @@ const BlogPost = ({ document }) => {
         image={document.data.image[0].text}
       />
       <BlogHero />
-      <PrismicText field={document.data.title} />
-      <PrismicRichText field={document.data.article} />
+      <BlogPostSection data={document} />
+
     </div>
   );
 };

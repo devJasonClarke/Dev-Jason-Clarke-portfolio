@@ -1,0 +1,46 @@
+.container {
+  line-height: 1.5;
+  max-width: 860px;
+  margin: 0 auto;
+  h1 {
+    font-size: 45px;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.format {
+    line-height: 1.5;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  p{
+    margin-bottom: 30px;
+  }
+  pre{
+    display: inline;
+    width: 100px;
+}
+}
+
+.author_container{
+    display: flex;
+    flex-wrap: wrap;
+p{
+    &:nth-child(2){
+        margin:auto 15px;
+    
+        
+    }
+}
+
+
+}

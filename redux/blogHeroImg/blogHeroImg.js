@@ -7,7 +7,13 @@ const initialState = {
 export const blogHeroImgSlice = createSlice({
   name: "blogHeroImg",
   initialState,
-  reducers: {}
+  reducers: {
+    setImg: (state, action) => {
+      state.img = action.payload;
+    }
+  }
 });
+
+export const { setImg } = blogHeroImgSlice.actions;
 
 export default blogHeroImgSlice.reducer;
