@@ -16,18 +16,12 @@ const ContactSection = ({ data }) => {
               <a
                 target="_blank"
                 href={`mailto:${document.link[0].text}`}
-                without
                 rel="noreferrer"
               >
                 {document.linkname[0].text}
               </a>
             ) : (
-              <a
-                target="_blank"
-                href={document.link[0].text}
-                without
-                rel="noreferrer"
-              >
+              <a target="_blank" href={document.link[0].text} rel="noreferrer">
                 {document.linkname[0].text}
               </a>
             )}
