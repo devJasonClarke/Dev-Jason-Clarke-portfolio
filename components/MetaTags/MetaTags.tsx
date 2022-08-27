@@ -4,7 +4,27 @@ const MetaTags = ({ title, description, image }) => {
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>{`${title} | Dev Jason`}</title>
-      <link rel="shortcut icon" href="/facivon.ico" type="image/x-icon" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="theme-color" content="#0c0c0c" />
       <meta name="description" content={description} />
       <meta itemProp="name" content={`${title} | Dev Jason`} />
       <meta itemProp="description" content={description} />
