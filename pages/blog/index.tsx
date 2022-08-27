@@ -14,7 +14,7 @@ const Blog = ({ blogs }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const paginatedArr = [];
+    let paginatedArr = [];
 
     const chunkArray = (arr, size) =>
       arr.length > size
