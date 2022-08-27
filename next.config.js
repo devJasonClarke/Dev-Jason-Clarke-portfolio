@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ["devjasonclarke.com", "images.pexels.com", "images.unsplash.com"]
+  },
+  typescript: {
+    ignoreBuildErrors: true
   }
 };
 
