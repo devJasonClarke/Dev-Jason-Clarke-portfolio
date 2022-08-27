@@ -10,6 +10,7 @@ import BlogPaginationBtns from "@/components/@/BlogPaginationBtns/BlogPagination
 const Blog = ({ blogs }) => {
   const page = useSelector((state) => state.blogPage.page);
   const arr = useSelector((state) => state.blogPage.arr);
+  const pageSize = 6;
 
   const dispatch = useDispatch();
 
@@ -24,7 +25,7 @@ const Blog = ({ blogs }) => {
           ])
         : (paginatedArr = [arr]);
 
-    chunkArray(blogs, 1);
+    chunkArray(blogs, pageSize);
 
     dispatch(setArr(paginatedArr));
     dispatch(setArrLenght(paginatedArr.length));
