@@ -1,11 +1,9 @@
 import React, { useRef, useEffect } from "react";
 
-import { jarallax, jarallaxVideo } from "jarallax";
+import { jarallax } from "jarallax";
 import "jarallax/dist/jarallax.css";
 import styles from "./Jarallax.module.scss";
 
-// Optional video extension
-jarallaxVideo();
 
 export default function Jarallax({ className = "", children, ...props }) {
   const $el = useRef();

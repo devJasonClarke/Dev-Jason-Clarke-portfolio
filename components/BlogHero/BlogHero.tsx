@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 
-const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
+const Jarallax = dynamic(() => import("../Jarallax/Jarallax"), {
   ssr: false
 });
 

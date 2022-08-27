@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-const Jarallax = dynamic(() => import("../Jarallax/Jarallax.jsx"), {
+const Jarallax = dynamic(() => import("../Jarallax/Jarallax"), {
   ssr: false
 });
 

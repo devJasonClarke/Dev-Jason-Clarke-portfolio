@@ -2,7 +2,19 @@
   line-height: 1.5;
   max-width: 860px;
   margin: 0 auto;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  p {
+    margin-bottom: 30px;
+  }
   h1 {
     font-size: 45px;
+  }
+  a {
+    color: #9a8dff;
   }
 }
