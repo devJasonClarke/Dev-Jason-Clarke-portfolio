@@ -4,7 +4,6 @@ import { jarallax } from "jarallax";
 import "jarallax/dist/jarallax.css";
 import styles from "./Jarallax.module.scss";
 
-
 export default function Jarallax({ className = "", children, ...props }) {
   const $el = useRef();
 
