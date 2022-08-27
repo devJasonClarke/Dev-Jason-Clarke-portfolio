@@ -4,6 +4,7 @@ const MetaTags = ({ title, description, image }) => {
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <title>{`${title} | Dev Jason`}</title>
+      <link rel="shortcut icon" href="/facivon.ico" type="image/x-icon" />
       <meta name="description" content={description} />
       <meta itemProp="name" content={`${title} | Dev Jason`} />
       <meta itemProp="description" content={description} />
