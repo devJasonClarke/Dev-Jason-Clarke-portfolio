@@ -11,7 +11,7 @@ const BlogPostSection = ({ data }) => {
   const dispatch = useDispatch();
 
   const img = data?.data.image[0].text;
-
+  console.log(data.data);
   useEffect(() => {
     dispatch(setImg(img));
   }, [dispatch, img]);
@@ -25,7 +25,12 @@ const BlogPostSection = ({ data }) => {
         <motion.img src={img} alt="img" className={styles.img} />
         <div className={styles.author_container}>
           <p>
-            Author: <PrismicText field={data?.data.author_name} />
+            Author:{" "}
+            {data.data.author_name[0]?.text ? (
+              <PrismicText field={data?.data.author_name} />
+            ) : (
+              "Jason Clarke"
+            )}
           </p>
           <p> | </p>
           <p>Published: {DateFormat(data?.data.timestamp)}</p>
