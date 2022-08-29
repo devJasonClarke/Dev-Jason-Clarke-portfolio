@@ -21,13 +21,10 @@ const BlogCard = ({ blog }) => {
           <div className={styles["text-container"]}>
             <p className={styles.date}> {DateFormat(blog.data.timestamp)}</p>
             <p className={styles.title}>
-              <PrismicText className={styles.title} field={blog.data.title} />
+              <PrismicText field={blog.data.title} />
             </p>
             <p className={styles.desc}>
-              <PrismicText
-                className={styles.title}
-                field={blog.data.introduction}
-              />
+              <PrismicText field={blog.data.introduction} />
             </p>
           </div>
         </div>
