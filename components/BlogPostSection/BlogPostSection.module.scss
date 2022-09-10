@@ -23,6 +23,10 @@
     height: auto;
     object-fit: cover;
   }
+  iframe {
+    width: 100%;
+    min-height: 530px;
+  }
   p {
     margin-bottom: 30px;
   }
@@ -41,6 +45,15 @@
   p {
     &:nth-child(2) {
       margin: auto 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .format {
+    iframe {
+      width: 100%;
+      min-height: 230px;
     }
   }
 }
