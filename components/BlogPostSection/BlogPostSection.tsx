@@ -11,7 +11,6 @@ const BlogPostSection = ({ data }) => {
   const dispatch = useDispatch();
 
   const img = data?.data.image[0].text;
-  console.log(data.data);
   useEffect(() => {
     dispatch(setImg(img));
   }, [dispatch, img]);
