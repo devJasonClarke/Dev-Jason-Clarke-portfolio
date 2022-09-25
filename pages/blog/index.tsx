@@ -35,7 +35,7 @@ const Blog = ({ blogs }) => {
     <div>
       <MetaTags
         title="Blog"
-        description="Blog articles I've published"
+        description="Welcome to my Blog. I hope you enjoy the articles I've published on Programming, UX/UI and my working processes"
         image={0}
       />
       <BlogHero />

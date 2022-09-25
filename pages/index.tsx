@@ -10,7 +10,8 @@ export default function Home({ page, blogs, work, contact }) {
     <>
       <MetaTags
         title="Home"
-        description="Hello, my name is Jason. Welcome to my website"
+        description="Hello, my name is Jason. UX/UI Advocate and
+        Software Engineer Based in Jamaica. Welcome to my website"
         image={0}
       />
       <Hero data={page} />
