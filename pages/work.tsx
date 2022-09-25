@@ -8,7 +8,7 @@ const Work = ({ work }) => {
     <div>
       <MetaTags
         title="Work"
-        description="A few of the projects i've woked on"
+        description="A few of the projects I've woked on"
         image={0}
       />
 
