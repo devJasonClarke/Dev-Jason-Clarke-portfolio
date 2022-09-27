@@ -1,5 +1,5 @@
 .container {
-  height: 650px;
+  min-height: 650px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -23,6 +23,20 @@
     }
   }
 }
+
+
+  .background:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.63);
+    transition: all 0.3s linear;
+}
+
 
 .alt {
   bottom: 220px;
