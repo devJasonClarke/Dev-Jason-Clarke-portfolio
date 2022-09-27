@@ -16,6 +16,10 @@
 /public/*.js
 /public/*.js.map
 
+# Robot and Sitemap
+/public/*.txt
+/public/*.xml
+
 # production
 /build
 
