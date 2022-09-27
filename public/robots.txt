@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: www.devjasonclarke.com
+
+# Sitemaps
+Sitemap: www.devjasonclarke.com/sitemap.xml
