@@ -16,6 +16,25 @@ export function linkResolver(doc) {
   }
 }
 
+export const Router = {
+  routes: [
+    {
+      type: "blog_post",
+      path: "/blog?/:blog/",
+      resolvers: {
+        folder: "blog",
+      },
+    },
+  ],
+  href: (type) => {
+    const route = Router.routes.find((r) => r.type === type);
+    return route && route.href;
+  },
+};
+
+export const Client = (req = null, options = {}) =>
+  createClient(endpoint, Object.assign({ routes: Router.routes }, options));
+
 // This factory function allows smooth preview setup
 export function createClient(config = {}) {
   const client = prismic.createClient(endpoint, {
