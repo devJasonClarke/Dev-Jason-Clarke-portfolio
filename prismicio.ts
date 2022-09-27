@@ -22,14 +22,14 @@ export const Router = {
       type: "blog_post",
       path: "/blog?/:blog/",
       resolvers: {
-        folder: "blog",
-      },
-    },
+        folder: "blog"
+      }
+    }
   ],
   href: (type) => {
     const route = Router.routes.find((r) => r.type === type);
     return route && route.href;
-  },
+  }
 };
 
 export const Client = (req = null, options = {}) =>
