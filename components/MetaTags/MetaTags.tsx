@@ -3,7 +3,7 @@ const MetaTags = ({ title, description, image }) => {
   return (
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <title>{`${title} | Dev Jason`}</title>
+      <title>{`${title} | Dev Jason Clarke`}</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -26,7 +26,7 @@ const MetaTags = ({ title, description, image }) => {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#0c0c0c" />
       <meta name="description" content={description} />
-      <meta itemProp="name" content={`${title} | Dev Jason`} />
+      <meta itemProp="name" content={`${title} | Dev Jason Clarke`} />
       <meta itemProp="description" content={description} />
       <meta
         itemProp="image"
@@ -38,7 +38,7 @@ const MetaTags = ({ title, description, image }) => {
       />
       <meta property="og:url" content="https://devjasonclarke.com" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={`${title} | Dev Jason`} />
+      <meta property="og:title" content={`${title} | Dev Jason Clarke`} />
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
@@ -49,7 +49,7 @@ const MetaTags = ({ title, description, image }) => {
         }
       />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${title} | Dev Jason`} />
+      <meta name="twitter:title" content={`${title} | Dev Jason Clarke`} />
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
