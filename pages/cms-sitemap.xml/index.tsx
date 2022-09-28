@@ -21,7 +21,7 @@ const Sitemap = ({ pages }) => {
         ) {
           return (
             <url key={index}>
-              <loc>{origin}/</loc>
+              <loc>https://{origin}/</loc>
               <lastmod>{lastModified}</lastmod>
               <changefreq>daily</changefreq>
               <priority>0.7</priority>
@@ -37,7 +37,7 @@ const Sitemap = ({ pages }) => {
 
           return (
             <url key={index}>
-              <loc>{url}</loc>
+              <loc>https://{url}</loc>
               <lastmod>{lastModified}</lastmod>
               <changefreq>daily</changefreq>
               <priority>0.7</priority>
