@@ -5,7 +5,7 @@ import PortfolioSection from "../components/PortfolioSection/PortfolioSection";
 
 const Work = ({ work }) => {
   return (
-    <div>
+    <>
       <MetaTags
         title="Work"
         description="A few of the projects I've woked on"
@@ -14,7 +14,7 @@ const Work = ({ work }) => {
 
       <Hero data={work} />
       <PortfolioSection data={work} />
-    </div>
+    </>
   );
 };
 

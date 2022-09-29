@@ -32,7 +32,7 @@ const Blog = ({ blogs }) => {
   }, [blogs, dispatch]);
 
   return (
-    <div>
+    <>
       <MetaTags
         title="Blog"
         description="Welcome to my Blog. I hope you enjoy the articles I've published on Programming, UX/UI and my working processes"
@@ -43,7 +43,7 @@ const Blog = ({ blogs }) => {
       <BlogPageSection data={arr?.[page]} pages={arr?.length}>
         <BlogPaginationBtns />
       </BlogPageSection>
-    </div>
+    </>
   );
 };
 

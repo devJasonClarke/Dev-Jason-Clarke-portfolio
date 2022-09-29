@@ -5,7 +5,7 @@ import MetaTags from "../components/MetaTags/MetaTags";
 
 const About = ({ about }) => {
   return (
-    <div>
+    <>
       <MetaTags
         title="About"
         description="I heard you wanted to learn more about me. What do you want to know?"
@@ -13,7 +13,7 @@ const About = ({ about }) => {
       />
       <Hero data={about} />
       <AboutSection data={about} />
-    </div>
+    </>
   );
 };
 export default About;

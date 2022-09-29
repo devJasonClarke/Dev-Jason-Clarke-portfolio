@@ -6,12 +6,12 @@ import ContactSection from "../components/ContactSection/ContactSection";
 
 const Contact = ({ contact }) => {
   return (
-    <div>
+    <>
       <MetaTags title="Contact" description="Get in touch" image={0} />
 
       <Hero data={contact} />
       <ContactSection data={contact} />
-    </div>
+    </>
   );
 };
 
