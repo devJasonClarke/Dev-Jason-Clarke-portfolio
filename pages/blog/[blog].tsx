@@ -5,15 +5,17 @@ import BlogPostSection from "@/components/@/BlogPostSection/BlogPostSection";
 
 const BlogPost = ({ document }) => {
   return (
-    <div>
+    <>
       <MetaTags
         title={document.data.title[0].text}
         description={document.data.introduction[0].text}
         image={document.data.image[0].text}
       />
-      <BlogHero />
-      <BlogPostSection data={document} />
-    </div>
+      <article>
+        <BlogHero />
+        <BlogPostSection data={document} />
+      </article>
+    </>
   );
 };
 
