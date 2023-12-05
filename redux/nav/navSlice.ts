@@ -2,11 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   routes: [
-    { name: "Home", route: "/" },
-    { name: "About", route: "/about" },
-    { name: "Blog", route: "/blog" },
-    { name: "Work", route: "/work" },
-    { name: "Contact", route: "/contact" }
+    { name: "Home", route: "" },
+    { name: "About", route: "https://www.devjasonclarke.com/" },
+    { name: "Work", route: "https://www.devjasonclarke.com/" },
+    { name: "Contact", route: "https://www.devjasonclarke.com/" }
   ]
 };
 

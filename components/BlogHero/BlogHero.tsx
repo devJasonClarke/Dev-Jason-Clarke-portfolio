@@ -21,7 +21,7 @@ const BlogHero = () => {
           src={
             img
               ? img
-              : "https://images.unsplash.com/photo-1698803999577-e6917a1c1f16?auto=format&fit=crop&q=80&w=2515&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              : "https://images.pexels.com/photos/14553706/pexels-photo-14553706.jpeg?auto=compress&cs=tinysrgb&w=2060&h=1750&dpr=1"
           }
           alt="img"
           layout="fill"
